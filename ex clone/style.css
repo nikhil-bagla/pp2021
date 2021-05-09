@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+    
+}
+
+.menu-container{
+height: 5rem;
+border: 1px solid red;
+background-color: lightblue;
+}
+
+.formula-container{
+ height: 2rem;
+ border: 1px solid red;
+}
+
+.grid-container{
+    height: calc(100vh - (2rem + 5rem+2.5rem));
+    background-color: lightgreen;
+    overflow: auto;
+    position: relative;
+}
+
+.sheets-container{
+    height: 2.5rem;
+    display: flex;
+}
+
+.icon-container{
+    width:3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:1px solid;
+}
+
+.sheet-list{
+    width:95%;
+    border:1px solid;
+    display: flex;
+    height: 100%;
+    overflow-x: auto;
+}
+
+.sheet{
+    height: 100%;
+    border:1px solid;
+    min-width: 5rem;
+    padding-top:0.5rem;
+    padding-left: 0.6rem;
+    background-color: lightgray;
+}
+.sheet-list::-webkit-scrollbar {
+    display: none;
+  }
+
+.icon{
+    font-size: 1rem;
+    color: green;
+}
+
+.active{
+    background-color: white;
+}
+
+/*grid */
+
+.top-left_block{
+
+background-color: gray;
+}
+
+.top-row{
+border: 1px solid;
+display: flex;
+position: absolute;
+top: 0px;
+
+}
+
+.grid{
+
+}
+
+.left-col{
+
+}
+
+.block{
+width: 2rem;
+height: 2rem;
+border: 1px solid;
+text-align: center;
+}
+
+.cell{
+    height: 2rem;
+    border: 1px solid;
+    min-width: 5rem;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+}
