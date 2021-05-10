@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    background-color: lightblue;
+    /* background-repeat: no-repeat; */
+    /* background-position: top; */
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    border:50px solid #FF4136;
+    text-align: center;
+    border-width: 0.4rem;
+    width: 30%;
+    /* margin-left: 22%; */
+    margin: auto; 
+    background-color: #DDDDDD;
+
+    margin-top: 5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+/* li::before {
+    content: "";
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/fb-heart.gif);
+    background-size: contain;
+    display: inline-block;
+    width: 0.84rem;
+    height: 0.84rem;
+    position: relative;
+    top: 0.1rem;
+    margin-right: 0.6rem;
+} */
+/* li::before {
+    content: "";
+    background-image: url(https://cdn0.iconfinder.com/data/icons/shop-store-1/123/check-01-512.png);
+    background-size: contain;
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    position: relative;
+    top: 0.2rem;
+    margin-right: 0.6rem;
+    
+    } */
+
+li {
+    border-left: 4px solid red;
+    background-color: lightgrey;
+    padding-left: 1rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.lesson-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.lesson {
+    border: 2px solid black;
+    min-width: 15vw;
+    text-align: center;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    color: #563f46;
+    background-color: rgb(191, 218, 217);
+    height: 2rem;
+    padding-top: 0.3rem;
+}
+
+.back{
+    border: 2px solid black;
+    width: 6vw;
+    text-align: center;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    color: #563f46;
+    background-color: rgb(191, 218, 217);
+    height: 2rem;
+    padding-top: 0.3rem;
+}
