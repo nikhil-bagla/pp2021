@@ -3,8 +3,14 @@ let italic = document.querySelector(".fa-italic");
 let underline = document.querySelector(".fa-underline");
 let fontSize = document.querySelector(".font-size");
 let fontFamily = document.querySelector(".font-family");
-let alignmentbtns = document.querySelectorAll(".alignment-container>*")
+let alignmentbtns = document.querySelectorAll(".alignment-container>*");
+let leftBtn=document.querySelector(".left");
+let rightBtn=document.querySelector(".right");
+let centerBtn=document.querySelector(".center");
+let color=document.querySelector(".color");
+let bgcolor=document.querySelector(".bg-color");
 
+/////////formatting////////////////////////////////////////
 
 bold.addEventListener("click", function () {
     // address get -> address
@@ -62,6 +68,8 @@ underline.addEventListener("click", function () {
     }
 })
 
+//////////////////////////////////////////////////////////////
+
 fontSize.addEventListener("change", function () {
     let cfontSize = fontSize.value;
     let uiCell = getcell();
@@ -85,6 +93,79 @@ fontFamily.addEventListener("change", function () {
     cellObj.fontFamily = cfontFamily;
 
 })
+
+/////////////////alignment////////////////////////////////
+leftBtn.addEventListener("click", function () {
+
+    let uiCell = getcell();
+    let { rid, cid } = getRIdIdfromAddress();
+    let cellObj = sheetArr[rid][cid];
+    uiCell.style.textAlign = "left";
+    for (let i = 0; i < alignmentbtns.length; i++) {
+        alignmentbtns[i].classList.remove("menu-active");
+    }
+    leftBtn.classList.add("menu-active");
+    // db update 
+    cellObj.halign = "left";
+})
+
+rightBtn.addEventListener("click", function () {
+
+    let uiCell = getcell();
+    let { rid, cid } = getRIdIdfromAddress();
+    let cellObj = sheetArr[rid][cid];
+    uiCell.style.textAlign = "right";
+    for (let i = 0; i < alignmentbtns.length; i++) {
+        alignmentbtns[i].classList.remove("menu-active");
+    }
+    rightBtn.classList.add("menu-active");
+    // db update 
+    cellObj.halign = "right";
+})
+
+centerBtn.addEventListener("click", function () {
+
+    let uiCell = getcell();
+    let { rid, cid } = getRIdIdfromAddress();
+    let cellObj = sheetArr[rid][cid];
+    uiCell.style.textAlign = "center";
+    for (let i = 0; i < alignmentbtns.length; i++) {
+        alignmentbtns[i].classList.remove("menu-active");
+    }
+    leftBtn.classList.add("menu-active");
+    // db update 
+    cellObj.halign = "center";
+})
+
+/////////////////////////////////////////////////////////
+
+//////////////////////color///////////////////////////////
+
+color.addEventListener("change", function () {
+    let ccolor = color.value;
+    let uiCell = getcell();
+    let { rid, cid } = getRIdIdfromAddress();
+    let cellObj = sheetArr[rid][cid];
+    //ui change
+    uiCell.style.color = ccolor;
+    //cellobject
+    cellObj.color = ccolor;
+
+})
+
+bgcolor.addEventListener("change", function () {
+    let cbgcolor = bgcolor.value;
+    let uiCell = getcell();
+    let { rid, cid } = getRIdIdfromAddress();
+    let cellObj = sheetArr[rid][cid];
+    //ui change
+    uiCell.style.backgroundColor = cbgcolor;
+    //cellobject
+    cellObj.bgcolor = cbgcolor;
+
+})
+
+/////////////////////////////////////////////////////////
 function getcell() {
     let address = addressElem.value;
     let { rid, cid } = getRIdIdfromAddress();
@@ -120,8 +201,40 @@ for (let i = 0; i < Allcells.length; i++) {
             bold.classList.remove("menu-active");
 
         }
+        if (cellObj.isItalic == true) {
+            italic.classList.add("menu-active");
+        } else {
+            italic.classList.remove("menu-active");
+
+        }
+        if (cellObj.isUnderline == true) {
+            underline.classList.add("menu-active");
+        } else {
+            underline.classList.remove("menu-active");
+
+        }
+        //fontSize,fontFamily
         fontSize.value = cellObj.fontSize;
         fontFamily.value = cellObj.fontFamily;
+        
+        //alignment
+        for(let i=0;i<alignmentbtns.length;i++){
+            alignmentbtns[i].classList.remove("menu-active");
+        }
+
+        if(cellObj.halign=="left"){
+            leftBtn.classList.add("menu-active");
+        }
+        else if(cellObj.halign=="right"){
+            rightBtn.classList.add("menu-active");
+        }
+        else if(cellObj.halign=="center"){
+            centerBtn.classList.add("menu-active");
+        }
+        
+        //color
+        color.value = cellObj.color;
+        bgcolor.value = cellObj.bgcolor;
     }
     )
 }

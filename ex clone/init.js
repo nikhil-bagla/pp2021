@@ -42,7 +42,7 @@ for (let i = 0; i < rows; i++) {
             fontFamily:"sans-serif",
             fontSize:16,
             color:"black",
-            bgColor:"",
+            bgcolor:"",
             hAlign:"center"
         }
         rowArr.push(cellObj);     
