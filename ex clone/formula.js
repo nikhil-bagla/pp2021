@@ -47,6 +47,7 @@ function removeFormula(myName, cellObj,cFormula) {
         }
     }
     cellObj.formula = "";
+    
 }
 // 1.
 formulabar.addEventListener("keydown", function (e) {
