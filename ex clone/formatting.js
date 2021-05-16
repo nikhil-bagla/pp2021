@@ -10,6 +10,7 @@ let centerBtn=document.querySelector(".center");
 let color=document.querySelector(".color");
 let bgcolor=document.querySelector(".bg-color");
 
+
 /////////formatting////////////////////////////////////////
 
 bold.addEventListener("click", function () {
@@ -132,7 +133,7 @@ centerBtn.addEventListener("click", function () {
     for (let i = 0; i < alignmentbtns.length; i++) {
         alignmentbtns[i].classList.remove("menu-active");
     }
-    leftBtn.classList.add("menu-active");
+    centerBtn.classList.add("menu-active");
     // db update 
     cellObj.halign = "center";
 })
@@ -184,6 +185,7 @@ function getRIdIdfromAddress() {
 
 let Allcells = document.querySelectorAll(".grid .cell");
 let addressElem = document.querySelector(".address");
+let formulabar=document.querySelector(".formula");
 for (let i = 0; i < Allcells.length; i++) {
     Allcells[i].addEventListener("click", function () {
         let cid = Allcells[i].getAttribute("cid");
@@ -235,6 +237,11 @@ for (let i = 0; i < Allcells.length; i++) {
         //color
         color.value = cellObj.color;
         bgcolor.value = cellObj.bgcolor;
+
+
+        ////////////////////Formula/////////////
+
+        formulabar.value=cellObj.formula;
     }
     )
 }

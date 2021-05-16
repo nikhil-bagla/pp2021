@@ -43,7 +43,10 @@ for (let i = 0; i < rows; i++) {
             fontSize:16,
             color:"black",
             bgcolor:"",
-            hAlign:"center"
+            hAlign:"center",
+            value: "",
+            formula:"",
+            children:[]
         }
         rowArr.push(cellObj);     
     }
