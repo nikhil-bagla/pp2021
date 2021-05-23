@@ -34,27 +34,38 @@ video{
     #record-video{
         position: fixed;
              /*  z-index: 10; */
-        right:50vw;
-        top:84vh;
-        border-radius:50%;
-        border: none;
-        height: 4rem;
-        width: 4rem; 
-        
+        right:45vw;
+        top:80vh;
         }
+        
+        .video-container{
+            position: relative;
+            
+         }
+ 
+         video{
+            position: absolute;
+            top:-1rem;
+         }
 }
 
 @media(max-width:2340px){
     #record-video{
-        position: fixed;
+
              /*  z-index: 10; */
-        right:50vw;
-        top:84vh;
-        border-radius:50%;
-        border: none;
-        height: 4rem;
-        width: 4rem; 
+        right:45vw;
+        top:85vh;
         
         }
+
+        .video-container{
+            position: relative;
+            
+         }
+ 
+         video{
+            position: absolute;
+            top:-1rem;
+         }
 }
 
