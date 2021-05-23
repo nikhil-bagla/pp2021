@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <!-- <h1>My Canvas</h1> -->
+    <canvas id="board"></canvas>
+</body>
+<script>
+    let board = document.querySelector("#board");
+    board.height = window.innerHeight;
+    board.width = window.innerWidth;
+    let tool = board.getContext("2d");
+    tool.fillStyle = "green";
+    // tool.fillRect(10, 10, board.width / 2, board.height / 2);
+    tool.strokeStyle = "lightblue";
+    // tool.fillRect(40,40,board.width/2,board.height/2);
+    tool.lineWidth = 10;
+    // tool.strokeRect(80, 80, board.width / 2, board.height / 2);
+    // draw();
+    // function draw() {
+
+    //     for (var i = 0; i < 6; i++) {
+    //         for (var j = 0; j < 6; j++) {
+    //             tool.fillStyle = 'rgb(' + Math.floor(255 - 42.5 * i) + ', ' +
+    //                 Math.floor(255 - 42.5 * j) + ', 0)';
+    //             tool.fillRect(j * 25, i * 25, 25, 25);
+    //         }
+    //     }
+    // }
+        tool.beginPath();
+        tool.moveTo(20,20);
+        tool.lineTo(88,88);
+        tool.strokeStyle="purple";
+        tool.stroke();
+
+        tool.beginPath();
+        tool.moveTo(20,20);
+        tool.lineTo(140,20);
+        tool.strokeStyle="pink";
+        tool.stroke();
+
+        tool.beginPath();
+        tool.moveTo(88,88);
+        tool.lineTo(140,20);
+        tool.strokeStyle="lightgreen";
+        tool.stroke();
+
+</script>
+
+</html>
