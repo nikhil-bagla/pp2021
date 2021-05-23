@@ -30,3 +30,31 @@ video{
     width: 100%;
 }
 
+@media(max-width:480px){
+    #record-video{
+        position: fixed;
+             /*  z-index: 10; */
+        right:6rem;
+        top:95vh;
+        border-radius:50%;
+        border: none;
+        height: 4rem;
+        width: 4rem; 
+        
+        }
+}
+
+@media(max-width:2340px){
+    #record-video{
+        position: fixed;
+             /*  z-index: 10; */
+        right:50vw;
+        top:90vh;
+        border-radius:50%;
+        border: none;
+        height: 4rem;
+        width: 4rem; 
+        
+        }
+}
+
