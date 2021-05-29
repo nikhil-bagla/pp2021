@@ -134,6 +134,8 @@ flex-direction: column;
     .zoom{
         width:2rem;
         right:2rem;
+        top:13vh;
+        height: 3rem;
   }
 
   .zoom button{
@@ -141,8 +143,9 @@ flex-direction: column;
   }
   .filter-container{
       flex-direction: row;
-      width:40vw;
+      width:55vw;
       height: 10vh;
+      top:8vh;
   }
   .rcbtn{
       display: flex;
@@ -155,7 +158,7 @@ flex-direction: column;
   #record-video{
     height: 4rem;
     width: 4rem; 
-    right:11rem;
+    right:12rem;
     top:76vh;
 
     
@@ -164,7 +167,7 @@ flex-direction: column;
     #click-picture{
     height: 4rem;
     width: 4rem; 
-    right:6rem;
+    right:7rem;
     top:76vh;
     
     }
