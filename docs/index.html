@@ -9,9 +9,26 @@
 </head>
 <body>
     <div class="video-container">
-        <video autoplay></video>
+        <video autoplay style="transform:scale(1);"></video>
     </div>
-    <button id="record-video">Record</button>
+    <button id="record-video">
+        <div id="record-div"></div>
+    </button>
+    <button id="click-picture">
+        <div id="click-div"></div>
+    </button>
+    <div class="filter-container">
+        <div class="filter" style="background-color: #f4a2613d"></div>
+        <div class="filter" style="background-color: #e85d0440"></div>
+        <div class="filter" style="background-color: #ad5d6d7a"></div>
+        <div class="filter" style="background-color: #2195f323"></div>
+        <div class="filter" style="background-color: #4caf4f31 "></div>
+        <div class="filter"></div>
+    </div>
+    <div class="zoom">
+        <button id="in">+</button>
+         <button id="out">-</button>
+    </div>
     <script src="script.js"></script>
     
 </body>
