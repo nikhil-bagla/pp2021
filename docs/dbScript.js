@@ -96,21 +96,9 @@ function deleteBtnHandler(e){
 function downloadMediaFromGallery(mId){
     let tx=db.transaction("gallery","readwrite");
     let gallery=tx.objectStore("gallery");
-    let req = gallery.openCursor();
+   
     
-    req.onsuccess=function(){
-        let cursor = req.result;
-    if(cursor){
-    let url=cursor.value.media;
-    console.log(url);
-    let a = document.createElement("a");
-    a.setAttribute("href", url);
-    a.setAttribute("download", "image.jpeg");
-    a.click();
-    a.remove();
-    
-    }
-}
+
 
 }
 
