@@ -93,13 +93,15 @@ navigator.mediaDevices.getUserMedia(constraints).then(function (mediaStream) {
     }
     mediaRecorder.onstop = function () {
         let blob = new Blob(chunks, { type: "video/mp4" });
+        
         chunks = [];  //so that new chunk can be downloaded
-        let blobUrl = URL.createObjectURL(blob);  //makes url using blob which will be used to download recording
-        var link = document.createElement("a");
-        link.href = blobUrl;
-        link.download = "video.mp4";
-        link.click();
-        link.remove();
+        addMediaToGallery(blob,"video");
+        // let blobUrl = URL.createObjectURL(blob);  //makes url using blob which will be used to download recording
+        // var link = document.createElement("a");
+        // link.href = blobUrl;
+        // link.download = "video.mp4";
+        // link.click();
+        // link.remove();
     }
 }).catch(function (err) {
     console.log(err);  //if we deny permission then error is displayed
@@ -135,10 +137,12 @@ function capture(){
         tool.fillRect(0,0,c.width,c.height);
     }
     
-    let link=document.createElement("a");  //link to download img
-    link.download='image.png';
-    link.href=c.toDataURL();
-    link.click();
-    link.remove();
+    // let link=document.createElement("a");  //link to download img
+    // link.download='image.png';
+    // link.href=c.toDataURL();
+    // link.click();
+    // link.remove();
+
+    addMediaToGallery(c.toDataURL(),"img");
     c.remove();
 }
