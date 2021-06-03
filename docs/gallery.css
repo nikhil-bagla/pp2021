@@ -64,3 +64,50 @@ button{
     border: 0.2rem solid #101820FF;
     margin-top:1rem; 
 }
+
+
+@media only screen and (max-width: 600px) {
+
+    body{
+        
+    }
+    .gallery-img-container {
+        height: 45vh;
+        width: 40vw;
+    }
+
+    .gallery-img-container img {
+        width: 77%;
+        height: 60%;
+        margin-left: 1rem;
+        margin-top: 0.8rem;
+    }
+
+    .gallery-vid-container video{
+        width: 77%;
+        height: 60%;
+        margin-left: 1rem;
+        margin-top: 0.8rem;
+    }
+    
+
+    .gallery-vid-container{
+        height: 45vh;
+        width: 40vw;
+    }
+    button{
+        display: inline-block;
+        min-width:3rem;
+        font-size: 0.5rem;
+    }
+    .gallery-download-button{
+        width:10%;
+        margin-left:1rem; 
+    
+    }
+    
+.gallery-delete-button{
+    width:10%;
+    margin-left:1rem; 
+    }
+}
