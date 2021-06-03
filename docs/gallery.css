@@ -65,10 +65,10 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
-    body {}
+    
     .gallery-img-container {
         height: 45vh;
-        width: 45vw;
+        width: 49vw;
     }
     .gallery-img-container img {
         width: 82%;
@@ -84,7 +84,7 @@ button {
     }
     .gallery-vid-container {
         height: 45vh;
-        width: 45vw;
+        width: 49vw;
     }
     button {
         display: inline-block;
