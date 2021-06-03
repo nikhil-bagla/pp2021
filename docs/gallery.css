@@ -68,7 +68,7 @@ button {
     
     .gallery-img-container {
         height: 45vh;
-        width: 47vw;
+        width: 46vw;
     }
     .gallery-img-container img {
         width: 82%;
@@ -84,7 +84,7 @@ button {
     }
     .gallery-vid-container {
         height: 45vh;
-        width: 47vw;
+        width: 46vw;
     }
     button {
         display: inline-block;
