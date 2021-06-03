@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
 </head>
-<body>
+<body style="background-color: black; display: flex; flex-wrap: wrap; justify-content: space-evenly ">
+    <button class="gallery-back">Back</button>
     <script src="dbScript.js"></script>
     <script>
     setTimeout(function(){
     viewMedia();
     },200)
+
+    let backBtn=document.querySelector(".gallery-back");
+    backBtn.addEventListener("click",function(){
+        location.assign("index.html");
+    })
     </script>
 </body>
 </html>

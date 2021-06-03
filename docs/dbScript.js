@@ -93,16 +93,17 @@ function deleteBtnHandler(e){
     e.currentTarget.parentNode.remove();
 }
 
-function downloadMediaFromGallery(mId){
-    let tx=db.transaction("gallery","readwrite");
-    let gallery=tx.objectStore("gallery");
-   
-    
-
-
-}
 
 function downloadBtnHandler(e){
-    let mId=e.currentTarget.parentNode.getAttribute("data-mid");
-    downloadMediaFromGallery(mId);
+  let a=document.createElement("a");
+  a.href=e.currentTarget.parentNode.children[0].src;
+
+  if(e.currentTarget.parentNode.children[0].nodeName=='IMG'){
+    a.download="image.png";
+  }
+  else{
+      a.download="video.mp4";
+  }
+  a.click();
+  a.remove();
 }
