@@ -6,7 +6,7 @@ body {
     margin-top: 4rem;
     display: flex;
     justify-content: space-evenly;
-    background-color: #322e2f;
+    background-color: #000000FF;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
@@ -22,13 +22,13 @@ body {
 .gallery-vid-container {
     height: 50vh;
     width: 30vw;
-    background-color: #e2d810;
+    background-color: #E5E4E2;
 }
 
 .gallery-img-container {
     height: 50vh;
     width: 30vw;
-    background-color: #e2d810;
+    background-color: #E5E4E2;
 }
 
 .gallery-vid-container video {
@@ -58,33 +58,34 @@ button {
     color: white;
     margin-right: 1rem;
     padding: 0.2rem;
-    background-color: #101820FF;
+    background-color: #00416A;
     border-radius: 4rem;
-    border: 0.2rem solid #101820FF;
+    border: 0.2rem solid #00416A;
     margin-top: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
-    
     .gallery-img-container {
-        height: 45vh;
-        width: 46vw;
+        height: 52vh;
+        width: 89vw;
     }
     .gallery-img-container img {
-        width: 82%;
-        height: 75%;
-        margin-left: 1rem;
-        margin-top: 0.8rem;
+        width: 95%;
+        height: 86%;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: -0.6rem;
     }
     .gallery-vid-container video {
-        width: 82%;
-        height: 75%;
-        margin-left: 1rem;
-        margin-top: 0.8rem;
+        width: 95%;
+        height: 86%;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: -0.6rem;
     }
     .gallery-vid-container {
-        height: 45vh;
-        width: 46vw;
+        height: 52vh;
+        width: 89vw;
     }
     button {
         display: inline-block;
