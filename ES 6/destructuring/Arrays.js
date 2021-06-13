@@ -1,4 +1,4 @@
-let introduction =['Hello','I','am','Tushar'];
+let introduction =['Hello','I','am','Nikhil'];
 // let greeting = introduction[0];
 // let pronoun = introduction[1];
 // let variable = introduction[2];
@@ -18,11 +18,17 @@ let introduction =['Hello','I','am','Tushar'];
 // console.log(greeting);
 // console.log(pronoun);
 
+// let [greeting,pronoun,a="s",name,b="s"]=introduction;
+// console.log(name);
+// console.log(greeting);
+// console.log(pronoun);
+// console.log(b);
+
 // let newarr =['Hello'];
 // let [greeting='Howdy',pronoun='has',name='Stark']=newarr;
 // console.log(greeting);
 // console.log(pronoun)
-// console.log(name);;
+// console.log(name);
 
 let a =3;
 let b =6;

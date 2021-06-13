@@ -4,7 +4,7 @@ let user ={
     age:42,
     education:{
         degree:'Masters',
-        school:{
+        school:{    
             name:'SPS',
             location:'Pitampura'
         }
@@ -12,7 +12,7 @@ let user ={
 }
 // I have to get the value of degree
 
-//raditional way;
+//traditional way;
 // console.log(user.education.degree);
 
 //destructuring way
